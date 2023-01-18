@@ -25,3 +25,6 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - name: test
         run: echo "despacito"
+      - name: tests
+        if: steps.test.outcome == 'success'
+        run: echo "k2s"
