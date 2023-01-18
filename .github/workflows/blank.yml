@@ -26,5 +26,5 @@ jobs:
       - name: test
         run: echo "success"
       - name: tests
-        if: ${steps.test.outcome == 'success'}
+        if: steps.test.outcome == 'success'
         run: echo "k2s"
